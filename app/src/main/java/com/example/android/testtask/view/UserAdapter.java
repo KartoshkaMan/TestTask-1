@@ -19,9 +19,20 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
     private List<User> mDataSet;
 
     // Selecting impl
+    /**
+     * This variable stores position of selected viewHolder
+     * @value -1 if no one viewHolder selected
+     */
     private int mSelectedPosition = -1;
+    /**
+     * This variable stores selected viewHolder
+     * @value null if no one viewHolder selected
+     */
     private UserViewHolder mSelectedHolder = null;
 
+    /**
+     * This callback is used for handling touch events on viewHolders and reassign selected one
+     */
     private UserViewHolder.Callback mCallback = new UserViewHolder.Callback() {
         @Override
         public void onSelected(UserViewHolder userViewHolder) {
@@ -68,10 +79,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
         return mDataSet.size();
     }
 
+
+
     public boolean hasSelectedHolder() {
         return mSelectedPosition != -1;
     }
-
     public User getSelectedUser() {
         if (mSelectedPosition != -1) return mDataSet.get(mSelectedPosition);
         else return null;
