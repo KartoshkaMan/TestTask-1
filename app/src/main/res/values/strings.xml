@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TestTask#1</string>
+    <string name="fetch_btn_text">Fetch</string>
+    <string name="details_btn_text">Details</string>
 </resources>
