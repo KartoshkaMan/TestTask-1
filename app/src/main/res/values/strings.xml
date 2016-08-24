@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">TestTask#1</string>
+
     <string name="fetch_btn_text">Fetch</string>
     <string name="details_btn_text">Details</string>
+
+
+    <string name="warning_no_items_fetched">No items fetched.</string>
+    <string name="warning_no_selected_user">Select one of displayed users.</string>
+
 </resources>

@@ -7,16 +7,29 @@
     android:orientation="vertical"
     tools:context="com.example.android.testtask.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/users_recycler_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/warning_no_users_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/warning_no_items_fetched"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/users_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorLightGray"
         android:orientation="horizontal"
         style="?android:buttonBarStyle">
 
